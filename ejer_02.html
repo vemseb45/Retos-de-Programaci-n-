@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <body>
+
+            <script>
+                /* ejerccio #1
+                solicitar un numero al usuario, imprimir en consola los numeros
+                impares desde el 1 hasta el numero ingresado por el usuario
+                */
+
+                let numero = parseInt(prompt('ingresa un numero '));
+
+                for (let i = 1; i <= numero; i++) {
+                    if (i % 2 !== 0) {
+                        console.log("Impar:", i);
+                    }
+                }
+
+                
+
+
+                /*
+                ejercicio #2
+
+                solicitar 10 numeros al usuario, indicar cuantos son pares
+                y cuantos son impares.
+                */
+
+               
+                let numeros = 0;  
+                let pares = 0;
+                let impares = 0;
+
+                for (let i = 1; i <= 10; i++) {
+
+                    numeros = parseInt(prompt('ingrese Diez numeros:'));
+
+                    if (numeros % 2 === 0) {
+                        pares = pares + 1;
+                    } else {
+                        impares = impares + 1;
+                    }
+                }
+
+                console.log("Cantidad de pares:", pares);
+                console.log("Cantidad de impares:", impares);
+
+
+                /*
+                ejercicio #3
+                solicitar al usuario ingresar numeros aleatorios, indicar si 
+                el numero ingresado es mayor o menor al numero anterior, al digitar
+                el numero cero el programa finalizara
+                */
+
+                let numeroAnterior = null; // Para comparar
+
+                while (true) {
+
+                    let numero = parseInt(prompt("Ingresa un número (o 0 para salir):"));
+
+                    console.log("Número ingresado:", numero);
+
+                    if (numero === 0) {
+                        console.log("El número ingresado fue cero. Saliendo del programa.");
+                        break;
+                    }
+
+                    if (numeroAnterior !== null) {
+                        if (numero > numeroAnterior) {
+                            console.log("El número es MAYOR al anterior.");
+                        } else if (numero < numeroAnterior) {
+                            console.log("El número es MENOR al anterior.");
+                        } else {
+                            console.log("El número es IGUAL al anterior.");
+                        }
+                    }
+
+                    numeroAnterior = numero;
+                }
+
+
+            </script>
+    
+
+
+    
+    </body>
+</html>
