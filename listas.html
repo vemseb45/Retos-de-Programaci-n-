@@ -24,46 +24,46 @@
     <script>
 
         function agregarFila() {
-        // 1. Tomar valores de los inputs
+        
         let n1 = parseFloat(document.getElementById("num1").value);
         let n2 = parseFloat(document.getElementById("num2").value);
 
-        // 2. Validar (que no estén vacíos)
+     
         if (isNaN(n1) || isNaN(n2)) {
             alert("Debes ingresar ambos números");
             return;
         }
 
-        // 3. Calcular resultado
+
         let resultado = n1 * n2;
 
-        // 4. Crear una nueva fila
+        
         let tabla = document.getElementById("tabla");
         let fila = document.createElement("tr");
 
-        // 5. Crear las 3 celdas
+   
         let celda1 = document.createElement("td");
         let celda2 = document.createElement("td");
         let celda3 = document.createElement("td");
 
-        // 6. Poner los valores en las celdas
+        
         celda1.textContent = n1;
         celda2.textContent = n2;
         celda3.textContent = resultado;
 
-        // 7. Agregar las celdas a la fila
+        
         fila.appendChild(celda1);
         fila.appendChild(celda2);
         fila.appendChild(celda3);
 
-        // 8. Agregar la fila a la tabla
+        
         tabla.appendChild(fila);
 
-        // 9. Limpiar inputs
+        
         document.getElementById("num1").value = "";
         document.getElementById("num2").value = "";
 
-        // 10. Enfocar el primer input
+        
         document.getElementById("num1").focus();
     }
 
